@@ -1,47 +1,173 @@
 ---
-# Page meta info, like heading, footer text and nav links
+ appConfig:
+  theme: nord-frost
+  language: it
+  layout: auto
+  iconSize: medium
+  startingView: default
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  statusCheckInterval: 0
+  faviconApi: iconhorse
+  routingMode: history
+  enableMultiTasking: false
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: false
+    searchEngine: duckduckgo
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: false
+  hideComponents:
+    hideHeading: false
+    hideNav: false
+    hideSearch: false
+    hideSettings: false
+    hideFooter: false
+  auth:
+    enableGuestAccess: false
+    users: []
+    enableKeycloak: false
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  disableConfigurationForNonAdmin: false
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: home.tognoni.tk
+  description: tognoni.tk network by @devmiki
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
-appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+    - title: Home
+      path: https://home.tognoni.tk
+      target: sametab
+  footerText: home.tognoni.tk - @devmiki
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
+  - name: Legenda
+    icon: fas fa-layer-group
+    items:
+      - title: Sempre online
+        icon: fab fa-raspberry-pi
+        color: '#66ff66'
+        id: 0_688_sempreonline
+      - title: Server principale
+        icon: fas fa-laptop-house
+        statusCheck: true
+        statusCheckUrl: https://cloud.tognoni.tk
+        color: '#00ffff'
+        id: 1_688_serverprincipale
+      - title: Altri host
+        icon: fas fa-laptop
+        color: '#ff9933'
+        id: 2_688_altrihost
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 3
+      collapsed: false
+      hideForGuests: false
+  - name: Media
+    icon: fas fa-compact-disc
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Stream
+        icon: favicon
+        url: https://stream.tognoni.tk
+        target: newtab
+        color: '#00ffff'
+        id: 0_480_stream
+      - title: Ombi
+        icon: favicon
+        url: https://ombi.tognoni.tk
+        color: '#00ffff'
+        id: 1_480_ombi
+      - title: Radarr
+        icon: favicon
+        url: https://radarr.tognoni.tk
+        color: '#00ffff'
+        id: 2_480_radarr
+      - title: Jackett
+        icon: favicon
+        url: https://jackett.tognoni.tk
+        color: '#00ffff'
+        id: 3_480_jackett
+      - title: Transmission
+        icon: favicon
+        url: https://transmission.tognoni.tk
+        color: '#00ffff'
+        id: 4_480_transmission
+  - name: App
+    icon: fab fa-uncharted
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Hassio
+        icon: favicon
+        url: https://hassio.tognoni.tk
+        color: '#66ff66'
+        id: 0_289_hassio
+      - title: Cloud
+        icon: favicon
+        url: https://cloud.tognoni.tk
+        color: '#00ffff'
+        id: 1_289_cloud
+      - title: Passwords
+        icon: favicon
+        url: https://passwords.tognoni.tk
+        color: '#66ff66'
+        id: 2_289_passwords
+      - title: Documents
+        icon: favicon
+        url: https://documents.tognoni.tk
+        color: '#00ffff'
+        id: 3_289_documents
+      - title: Money
+        icon: favicon
+        url: https://money.tognoni.tk
+        color: '#ff9933'
+        id: 4_289_money
+      - title: Vpn
+        icon: favicon
+        url: https://vpn.tognoni.tk
+        color: '#00ffff'
+        id: 5_289_vpn
+  - name: Servizi
+    icon: fas fa-server
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Proxy
+        icon: favicon
+        url: https://proxy.tognoni.tk
+        color: '#66ff66'
+        id: 0_748_proxy
+      - title: Filebrowser
+        icon: favicon
+        url: https://srv2.files.tognoni.tk
+        color: '#00ffff'
+        id: 1_748_filebrowser
+      - title: Handbrake
+        icon: favicon
+        url: http://192.168.1.140:5800
+        color: '#00ffff'
+        id: 2_748_handbrake
   
